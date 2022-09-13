@@ -1,4 +1,5 @@
 import 'package:ass6/main.dart';
+import 'package:ass6/screen_one.dart';
 import 'package:flutter/material.dart';
 
 class screen_tow extends StatefulWidget {
@@ -15,7 +16,10 @@ class _screen_towState extends State<screen_tow> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Screen tow"),
+          title: Text(
+            "Registration",
+            style: TextStyle(fontSize: 25),
+          ),
           actions: [
             ElevatedButton.icon(
                 onPressed: (() {
@@ -30,11 +34,27 @@ class _screen_towState extends State<screen_tow> {
                 label: Text("Home"))
           ],
         ),
-        body: Container(
-            child: Text(
-          "press the home button to back to the home page.",
-          style: TextStyle(fontSize: 30),
-        )),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              MaterialButton(
+                textColor: Colors.blue,
+                focusColor: Colors.blue,
+                splashColor: Colors.blue,
+                onPressed: (() {
+                  setState(() {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return screen_one();
+                    }));
+                  });
+                }),
+                child: Text("Login", style: TextStyle(fontSize: 30)),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -31,9 +31,17 @@ class _HomeState extends State<Home> {
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              ElevatedButton(
+              Image(
+                  image: NetworkImage(
+                      "https://play-lh.googleusercontent.com/5e7z5YCt7fplN4qndpYzpJjYmuzM2WSrfs35KxnEw-Ku1sClHRWHoIDSw3a3YS5WpGcI")),
+              SizedBox(
+                height: 100,
+              ),
+              MaterialButton(
+                  splashColor: Colors.blue,
+                  textColor: Colors.blue,
                   onPressed: (() {
                     setState(() {
                       Navigator.push(context,
@@ -43,10 +51,11 @@ class _HomeState extends State<Home> {
                     });
                   }),
                   child: Text(
-                    "Press to go to Screen 1",
+                    "Login",
                     style: TextStyle(fontSize: 30),
                   )),
-              ElevatedButton(
+              MaterialButton(
+                  textColor: Colors.blue,
                   onPressed: (() {
                     setState(() {
                       Navigator.push(context,
@@ -56,7 +65,7 @@ class _HomeState extends State<Home> {
                     });
                   }),
                   child: Text(
-                    "Press to go to Screen 2",
+                    "Register",
                     style: TextStyle(fontSize: 30),
                   ))
             ],
