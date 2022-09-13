@@ -16,12 +16,14 @@ class _screen_oneState extends State<screen_one> {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.black,
             title: Text(
               "Login Page",
               style: TextStyle(fontSize: 25),
             ),
             actions: [
               ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
                 onPressed: (() {
                   setState(() {
                     Navigator.pop(context,
@@ -31,7 +33,10 @@ class _screen_oneState extends State<screen_one> {
                   });
                 }),
                 icon: Icon(Icons.home),
-                label: Text("Home"),
+                label: Text(
+                  "Home",
+                  style: TextStyle(color: Colors.blue),
+                ),
               )
             ],
           ),

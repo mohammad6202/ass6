@@ -16,12 +16,14 @@ class _screen_towState extends State<screen_tow> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.black,
           title: Text(
             "Registration",
             style: TextStyle(fontSize: 25),
           ),
           actions: [
             ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
                 onPressed: (() {
                   setState(() {
                     Navigator.pop(context,
@@ -31,7 +33,10 @@ class _screen_towState extends State<screen_tow> {
                   });
                 }),
                 icon: Icon(Icons.home),
-                label: Text("Home"))
+                label: Text(
+                  "Home",
+                  style: TextStyle(color: Colors.blue),
+                ))
           ],
         ),
         body: Center(
@@ -44,7 +49,7 @@ class _screen_towState extends State<screen_tow> {
                 splashColor: Colors.blue,
                 onPressed: (() {
                   setState(() {
-                    Navigator.push(context,
+                    Navigator.pop(context,
                         MaterialPageRoute(builder: (context) {
                       return screen_one();
                     }));
